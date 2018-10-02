@@ -1,0 +1,30 @@
+section.index-form.fullscreen
+    .col-12
+        .d-flex.justify-content-end
+            a.btn.btn--sm.btn.btn-standard href="/lecturer-home"
+                i.fas.fa-arrow-left.fa-fw
+                | Kembali
+    .col-12
+        .index-form__wrapper
+            form
+                .field
+                    label for="topic" Topik
+                    input type="text" name="topic"/
+                .field
+                    label for="course" Mata Pelajaran
+                    select name="course"
+                        option value="Math" Matematika 
+                        option value="Chemistry" Kimia 
+                        option value="Physic" Fisika
+                        option value="Biology" Biologi
+                .field
+                    label for="duration" Durasi
+                    input type="number" name="duration"/
+                .field
+                    label for="start_date" Tanggal Mulai
+                    input type="date" name="start_date"/
+                .col-12
+                    .d-flex.justify-content-center
+                        a.btn.btn--sm.btn-standard href="/lecturer-home"
+                            i.fas.fa-plus-circle.fa-fw
+                            | Buat Jadwal Kelas Baru

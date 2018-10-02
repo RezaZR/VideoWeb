@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     $(".fullscreen").css({ minHeight: window.innerHeight - 91 - 29.6 });
 });
 

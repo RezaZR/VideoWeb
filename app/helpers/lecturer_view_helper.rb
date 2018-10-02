@@ -1,0 +1,2 @@
+module LecturerViewHelper
+end

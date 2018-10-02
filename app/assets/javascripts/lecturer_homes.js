@@ -1,2 +1,5 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready(function() {
+    // $(".dataTables_filter label").html("Cari: <input type='search' class placeholder aria-controls='table'>");
+});
+
+$('#table').DataTable();

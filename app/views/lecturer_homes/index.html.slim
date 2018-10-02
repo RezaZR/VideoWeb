@@ -1,0 +1,63 @@
+section.home.fullscreen
+    .col-12
+        .d-flex.justify-content-end
+            a.btn.btn--sm.btn-standard.first href="/lecturer-create"
+                i.fas.fa-plus-circle.fa-fw
+                | Buat Jadwal Kelas
+            a.btn.btn--sm.btn-standard href="/lecturer-edit"
+                i.fas.fa-video.fa-fw
+                | Live Streaming
+    .col-12
+        h2 Jadwal Kelas
+        table.display#table
+            thead
+                tr
+                    th Topik
+                    th Mata Pelajaran
+                    th Durasi
+                    th Tanggal Mulai
+                    th Status
+                    th Aksi
+            tbody
+                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+                    td Trigonometri
+                    td Matematika
+                    td 2 jam
+                    td 12-11-2018
+                    td Belum dimulai
+                    td
+                        a href="/lecturer-view" title="Klik untuk melihat detail"
+                            i.fas.fa-eye.fa-fw
+                        a href="/lecturer-edit" title="Klik untuk mengubah"
+                            i.fas.fa-pencil-alt.fa-fw
+                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+                        a href="/lecturer-video"
+                            i.fas.fa-video-slash.fa-fw
+                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+                    td Percepatan Benda
+                    td Fisika
+                    td 2 jam
+                    td 14-11-2018
+                    td Belum dimulai
+                    td
+                        a href="/lecturer-view"
+                            i.fas.fa-eye.fa-fw title="Klik untuk melihat detail"
+                        a href="/lecturer-edit"
+                            i.fas.fa-pencil-alt.fa-fw title="Klik untuk mengubah"
+                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+                        a href="/lecturer-video"
+                            i.fas.fa-video-slash.fa-fw
+                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+                    td Tenses
+                    td Bahasa Inggris
+                    td 2 jam
+                    td 16-11-2018
+                    td Belum dimulai
+                    td
+                        a href="/lecturer-view" title="Klik untuk melihat detail"
+                            i.fas.fa-eye.fa-fw
+                        a href="/lecturer-edit" title="Klik untuk mengubah"
+                            i.fas.fa-pencil-alt.fa-fw
+                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+                        a href="/lecturer-video"
+                            i.fas.fa-video-slash.fa-fw

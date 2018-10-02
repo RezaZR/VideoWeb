@@ -26,8 +26,11 @@ html
     = stylesheet_link_tag "application", media: "all"
 
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-    = javascript_include_tag "fontawesome-all.js"
+    / = javascript_include_tag "fontawesome-all.js"
     = javascript_include_tag "//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" 
+
+    script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" 
+
     
   body class=("#{controller_name} #{action_name}")
     .container
@@ -41,12 +44,21 @@ html
               .d-flex.justify-content-end
                 .dropdown#dropdown
                   p.dropdown__title
-                    | Admin
+                    - if params[:controller] == "admin_homes" || params[:controller] == "admin_create_users"
+                      | Admin
+                    - if params[:controller] == "lecturer_homes" || params[:controller] == "lecturer_create" || params[:controller] == "lecturer_edit" || params[:controller] == "lecturer_view" || params[:controller] == "lecturer_video"
+                      | Pengajar 1
+                    - if params[:controller] == "Student_homes"
+                      | Pelajar 1
                     span.arrow
                   ul
+                    - if params[:controller] != "admin_homes" || params[:controller] == "admin_create_users"
+                    li
+                      i.fas.fa-user
+                      | Ubah profil
                     li
                       i.fas.fa-arrow-circle-right
-                      | Logout
+                      | Keluar
         main
           = yield
         - if params[:controller] == "admin_homes" || params[:controller] == "admin_create_users"

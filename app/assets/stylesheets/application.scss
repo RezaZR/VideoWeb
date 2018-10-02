@@ -353,10 +353,9 @@ textarea {
     }
     &--delete {
         background: #fb2424 !important;
-        background: linear-gradient(-180deg, #fb2424 0%, #b50000 90%) !important;
         color: #fff !important;
         &:hover {
-            background: linear-gradient(-180deg, #e84141 0%, #ad0606 90%) !important;
+            background: #ff0a0a  !important;
         }
     }
 }
@@ -508,8 +507,15 @@ textarea {
             opacity: 1;
             display: block;
             overflow: hidden;
-            &:hover {
-                background-color: #000;
+            height: 90px;
+            & li {
+                display: block;
+                &:hover {
+                    background-color: #000;
+                }
+                &:not(:last-child) {
+                    border-bottom: .5px solid rgba(245, 245, 245, .5);
+                }
             }
         }     
     }
@@ -523,6 +529,7 @@ textarea {
     }
     & ul {
         position: absolute;
+        height: 0px;
         width: 100%;
         overflow: visible;
         opacity: 0;
@@ -531,6 +538,7 @@ textarea {
         border-bottom: 2px solid #f5f5f5;
     }
     & li {
+        display: none;
         list-style-type: none;
         margin: 0 auto;
         padding: .5em;
@@ -538,9 +546,11 @@ textarea {
         cursor: pointer;
         &:first-child {
             margin-top: .25em;
-        } &:last-child {
+        } 
+        &:last-child {
             margin-bottom: .25em;
         }
+        
     }
     & svg {
         margin-right: .5em;
@@ -577,18 +587,18 @@ textarea {
 .field {
     width: 80%;
     margin: 1.25em auto;
-    label, input, textarea, sup {
+    & label, & input, & textarea, & sup, & select {
         display: block;
         margin: 0 auto;
         width: 80%;
     }
-    sup {
+    & sup {
         text-align: center;
     }
-    label {
+    & label {
         font-size: 14px;
     }
-    input {
+    & input, & select {
         height: 32px;
         font-size: 15px;
         border-radius: 3px;
@@ -599,7 +609,10 @@ textarea {
             border: 1px solid #C62828;
         }
     }
-    textarea {
+    & select {
+        padding: 0;
+    }
+    & textarea {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
         border-radius: 3px;
@@ -618,7 +631,11 @@ textarea {
     margin: 2em 0;
 }
 
-.dataTables_wrapper .dataTables_filter input, .dataTables_wrapper select {
+.dataTables_wrapper label, .dataTables_info {
+    display: none;
+}
+
+.dataTables_wrapper .dataTables_filter input {
     border-radius: 5px;
     border: none;
     border: 1px solid #4d4d4d;
@@ -633,6 +650,45 @@ textarea {
     font-weight: 600;
     background-color: #4d4d4d;
     border-radius: 5px;
+}
+
+table.dataTable.no-footer {
+    border: 1px solid #4d4d4d;
+}
+
+.dataTable {
+    & thead {
+        background-color: #C62828;
+        color: #f5f5f5;
+        & th:not(:last-child) {
+            border-right: 1px solid #4d4d4d;
+        }
+    }
+    & tbody {
+        & tr {
+            text-align: center;
+            & td {
+                cursor: pointer;
+                & a {
+                    color: #000;
+                    & svg {
+                        margin: 0 .25em;
+                    }
+                }
+                &:not(:last-child) {
+                    border-right: 1px solid #4d4d4d;
+                }
+            }
+        }
+    }
+}
+
+table.dataTable.display tbody tr.odd {
+    background-color: #f5f5f5;
+}
+
+table.dataTable.display tbody tr:hover {
+    background-color: #d7d7d7;
 }
 
 .header {
@@ -681,7 +737,28 @@ main {
     padding: 1em 3em;
 }
 
+.home {
+    & .first {
+        margin-right: .5em;
+    }
+    & h2 {
+        font-size: 24px;
+        border-bottom: 1px solid #4d4d4d;
+    }
+}
+
 .index-form {
+    & .col-10, & .col-8 {
+        border-bottom: 1px solid #4d4d4d;
+        & h2 {
+            font-size: 24px;
+        }
+    }
+    & .col-4 {
+        & a:not(:last-child) {
+            margin-right: .25em;
+        }
+    }
     &__wrapper {
         width: 50%;
         display: block;

@@ -1,0 +1,40 @@
+section.index-form.fullscreen
+    .d-flex.centered-items
+        .col-8
+            .d-flex.justify-content-start
+                h2 Detail Jadwal Kelas A
+        .col-4
+            .d-flex.justify-content-end
+                a.btn.btn--sm.btn.btn-standard href="/lecturer-edit"
+                    i.fas.fa-pencil-alt.fa-fw
+                    | Ubah
+                a.btn.btn--sm.btn.btn-standard--delete 
+                    i.fas.fa-trash-alt.fa-fw
+                    | Hapus
+                a.btn.btn--sm.btn.btn-standard href="/lecturer-home"
+                    i.fas.fa-arrow-left.fa-fw
+                    | Kembali
+    .col-12
+        .index-form__wrapper.index-form__wrapper--view
+            form
+                .field
+                    label for="topic" Topik
+                    input type="text" name="topic"/
+                .field
+                    label for="course" Mata Pelajaran
+                    select name="course"
+                        option value="Math" Matematika 
+                        option value="Chemistry" Kimia 
+                        option value="Physic" Fisika
+                        option value="Biology" Biologi
+                .field
+                    label for="duration" Durasi
+                    input type="number" name="duration"/
+                .field
+                    label for="start_date" Tanggal Mulai
+                    input type="date" name="start_date"/
+                .col-12
+                    .d-flex.justify-content-center
+                        a.btn.btn--sm.btn-standard href="/lecturer-home"
+                            i.fas.fa-pencil-alt.fa-fw
+                            | Ubah Jadwal Kelas

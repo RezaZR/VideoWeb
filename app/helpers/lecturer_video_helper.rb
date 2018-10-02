@@ -1,0 +1,2 @@
+module LecturerVideoHelper
+end
