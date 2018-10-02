@@ -1,0 +1,26 @@
+section.home.fullscreen
+    .col-12
+        .d-flex.justify-content-end
+            a.btn.btn--sm.btn.btn-standard href="/admin_create"
+                i.fas.fa-plus-circle.fa-fw
+                | Buat Pengguna Baru
+    .col-12
+        table.display#table
+            thead
+                tr
+                    th NIK/NPM
+                    th Nama
+                    th Level
+            tbody
+                tr onclick="document.location='/training-details';return false;" title="Klik untuk melihat detail"
+                    td 11028
+                    td Joko Priyatno
+                    td Pengajar
+                tr onclick="document.location='/training-details';return false;" title="Klik untuk melihat detail"
+                    td 09011
+                    td Andina Cahyadi
+                    td Pengajar
+                tr onclick="document.location='/training-details';return false;" title="Klik untuk melihat detail"
+                    td 18027
+                    td Johan Priambudi
+                    td Pelajar
