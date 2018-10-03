@@ -1,6 +1,6 @@
 section.index-form.index-form--video.fullscreen
     .col-2.no-padding
-        .index-form__info
+        .index-form__info.shadow__outset--md
             .index-form__info__followers
                 .d-flex.centered-items
                     .index-form__info__followers__body
@@ -9,7 +9,8 @@ section.index-form.index-form--video.fullscreen
                                 h4 List Pengikut
                         .col-6.no-padding
                             .d-flex.justify-content-end
-                                small Lihat Semua
+                                a href="/lecturer-home"
+                                    small Lihat Semua
                 .index-form__info__followers__details
                     .d-flex.centered-items
                         .col-3.no-padding
@@ -60,20 +61,27 @@ section.index-form.index-form--video.fullscreen
                         a.btn.btn--sm.btn.btn-standard href="/lecturer-home"
                             i.fas.fa-video-slash.fa-fw
                             | Sudahi
-        .col-9.no-padding
-            .index-form__content__video
-                #video
-                p asd
-                p asd
-                p asd
-                p asd
-        .col-3.no-padding
-            .index-form__content__chat
-                .index-form__content__chat__wheel
-                .index-form__content__chat__textarea
-                    form
-                        textarea
-                        .d-flex.centered-items
-                            .col-12.no-padding
-                                .d-flex.justify-content-end
-                                    button.btn.btn--sm.btn-standard Chat
+        .index-form__content__body
+            .col-9.no-padding
+                .index-form__content__body__video.shadow__outset--sm
+                    #video
+                    .index-form__content__body__video__info.shadow__outset--sm
+                        p 
+                            i.fas.fa-user.fa-fw
+                            | Pengajar 1
+                        p 
+                            i.fas.fa-book.fa-fw
+                            | Fisika
+                        p 
+                            i.fas.fa-eye.fa-fw
+                            | 200
+            .col-3.no-padding
+                .index-form__content__body__chat
+                    .index-form__content__body__chat__wheel
+                    .index-form__content__body__chat__textarea
+                        form
+                            textarea
+                            .d-flex.centered-items
+                                .col-12.no-padding
+                                    .d-flex.justify-content-end
+                                        button.btn.btn--sm.btn-standard Chat

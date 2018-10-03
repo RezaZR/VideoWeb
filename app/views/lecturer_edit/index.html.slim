@@ -5,7 +5,7 @@ section.index-form.fullscreen
                 h2 Ubah - Jadwal Kelas A
         .col-2
             .d-flex.justify-content-end
-                a.btn.btn--sm.btn.btn-standard href="/lecturer-home"
+                a.btn.btn.btn-standard href="/lecturer-home"
                     i.fas.fa-arrow-left.fa-fw
                     | Kembali
     .col-12
@@ -22,13 +22,22 @@ section.index-form.fullscreen
                         option value="Physic" Fisika
                         option value="Biology" Biologi
                 .field
+                    label for="start_time" Jam Mulai
+                    input type="text" name="start_time"/
+                .field
                     label for="duration" Durasi
                     input type="number" name="duration"/
                 .field
                     label for="start_date" Tanggal Mulai
                     input type="date" name="start_date"/
+                .field
+                    label for="mode" Mode
+                    select name="mode"
+                        option value="board" Papan tulis online
+                        option value="live" Live streaming
+                        option value="offline" Offline streaming
                 .col-12
                     .d-flex.justify-content-center
-                        a.btn.btn--sm.btn-standard href="/lecturer-home"
-                            i.fas.fa-pencil-alt.fa-fw
-                            | Ubah Jadwal Kelas
+                        a.btn.btn-standard href="/lecturer-home"
+                            i.fas.fa-plus-circle.fa-fw
+                            | Buat Jadwal Kelas Baru

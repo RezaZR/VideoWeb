@@ -1,4 +1,7 @@
-$('#table').DataTable();
+$('#table-1').DataTable();
+$('#table-2').DataTable();
+$('#table-3').DataTable();
+$('#table-4').DataTable();
 
 var tag = document.createElement('script');
 
