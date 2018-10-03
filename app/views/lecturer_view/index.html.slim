@@ -16,25 +16,25 @@ section.index-form.fullscreen
                     | Kembali
     .col-12
         .index-form__wrapper.index-form__wrapper--view
-            form
-                .field
-                    label for="topic" Topik
-                    input type="text" name="topic"/
-                .field
-                    label for="course" Mata Pelajaran
-                    select name="course"
-                        option value="Math" Matematika 
-                        option value="Chemistry" Kimia 
-                        option value="Physic" Fisika
-                        option value="Biology" Biologi
-                .field
-                    label for="duration" Durasi
-                    input type="number" name="duration"/
-                .field
-                    label for="start_date" Tanggal Mulai
-                    input type="date" name="start_date"/
-                .col-12
-                    .d-flex.justify-content-center
-                        a.btn.btn--sm.btn-standard href="/lecturer-home"
-                            i.fas.fa-pencil-alt.fa-fw
-                            | Ubah Jadwal Kelas
+            table cellpadding="10"
+                tbody
+                    tr
+                        th Topik
+                        td Percepatan Benda
+                    tr
+                        th Mata Pelajaran
+                        td Fisika
+                    tr
+                        th Durasi
+                        td 2 jam
+                    tr
+                        th Tanggal Mulai
+                        td 14-11-2018
+                    tr
+                        th Status
+                        td Belum dimulai
+            .col-12
+                .d-flex.justify-content-center
+                    a.btn.btn--sm.btn-standard href="/lecturer-video"
+                        i.fas.fa-video.fa-fw
+                        | Mulai Kelas
