@@ -1,63 +1,108 @@
-section.home.fullscreen
-    .col-12
-        .d-flex.justify-content-end
-            a.btn.btn--sm.btn-standard.first href="/lecturer-create"
-                i.fas.fa-plus-circle.fa-fw
-                | Buat Jadwal Kelas
-            a.btn.btn--sm.btn-standard href="/lecturer-edit"
-                i.fas.fa-video.fa-fw
-                | Live Streaming
-    .col-12
-        h2 Jadwal Kelas
-        table.display#table
-            thead
-                tr
-                    th Topik
-                    th Mata Pelajaran
-                    th Durasi
-                    th Tanggal Mulai
-                    th Status
-                    th Aksi
-            tbody
-                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
-                    td Trigonometri
-                    td Matematika
-                    td 2 jam
-                    td 12-11-2018
-                    td Belum dimulai
-                    td
-                        a href="/lecturer-view" title="Klik untuk melihat detail"
-                            i.fas.fa-eye.fa-fw
-                        a href="/lecturer-edit" title="Klik untuk mengubah"
-                            i.fas.fa-pencil-alt.fa-fw
-                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
-                        a href="/lecturer-video"
-                            i.fas.fa-video-slash.fa-fw
-                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
-                    td Percepatan Benda
-                    td Fisika
-                    td 2 jam
-                    td 14-11-2018
-                    td Belum dimulai
-                    td
-                        a href="/lecturer-view"
-                            i.fas.fa-eye.fa-fw title="Klik untuk melihat detail"
-                        a href="/lecturer-edit"
-                            i.fas.fa-pencil-alt.fa-fw title="Klik untuk mengubah"
-                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
-                        a href="/lecturer-video"
-                            i.fas.fa-video-slash.fa-fw
-                tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
-                    td Tenses
-                    td Bahasa Inggris
-                    td 2 jam
-                    td 16-11-2018
-                    td Belum dimulai
-                    td
-                        a href="/lecturer-view" title="Klik untuk melihat detail"
-                            i.fas.fa-eye.fa-fw
-                        a href="/lecturer-edit" title="Klik untuk mengubah"
-                            i.fas.fa-pencil-alt.fa-fw
-                        i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
-                        a href="/lecturer-video"
-                            i.fas.fa-video-slash.fa-fw
+section.home.fullscreen            
+    input#tab1 checked="" name="tabs" type="radio" /
+    label for="tab1"
+        i.fas.fa-video.fa-fw
+        | Video
+    input#tab2 name="tabs" type="radio" /
+    label for="tab2"
+        i.fas.fa-chalkboard.fa-fw
+        | Papan Tulis
+    input#tab3 name="tabs" type="radio" /
+    label for="tab3"
+        i.fas.fa-clipboard-list.fa-fw
+        | Jadwal
+    input#tab4 name="tabs" type="radio" /
+    label for="tab4"
+        i.fas.fa-history.fa-fw
+        | Riwayat
+
+    .home__content#content1
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Video Anda
+            .col-6
+                .d-flex.justify-content-end
+                    a.btn.btn-standard.first href="/lecturer-home"
+                        i.fas.fa-plus-circle.fa-fw
+                        | Unggah Video Baru
+                    a.btn.btn-standard href="/lecturer-edit"
+                        i.fas.fa-video.fa-fw
+                        | Live Streaming
+        .home__content__video
+            .col-3
+                #video1
+            .col-3
+                #video2
+            .col-3
+                #video3
+    .home__content#content2
+        p
+            | Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+        p
+            | Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+    .home__content#content3
+        p
+            | Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+        p
+            | Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+    .home__content#content4
+        p
+            | Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+        p
+            | Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+
+    / .col-12
+    /     h2 Jadwal Kelas
+    /     table.display#table
+    /         thead
+    /             tr
+    /                 th Topik
+    /                 th Mata Pelajaran
+    /                 th Durasi
+    /                 th Tanggal Mulai
+    /                 th Status
+    /                 th Aksi
+    /         tbody
+    /             tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+    /                 td Trigonometri
+    /                 td Matematika
+    /                 td 2 jam
+    /                 td 12-11-2018
+    /                 td Belum dimulai
+    /                 td
+    /                     a href="/lecturer-view" title="Klik untuk melihat detail"
+    /                         i.fas.fa-eye.fa-fw
+    /                     a href="/lecturer-edit" title="Klik untuk mengubah"
+    /                         i.fas.fa-pencil-alt.fa-fw
+    /                     i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+    /                     a href="/lecturer-video"
+    /                         i.fas.fa-video-slash.fa-fw
+    /             tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+    /                 td Percepatan Benda
+    /                 td Fisika
+    /                 td 2 jam
+    /                 td 14-11-2018
+    /                 td Belum dimulai
+    /                 td
+    /                     a href="/lecturer-view"
+    /                         i.fas.fa-eye.fa-fw title="Klik untuk melihat detail"
+    /                     a href="/lecturer-edit"
+    /                         i.fas.fa-pencil-alt.fa-fw title="Klik untuk mengubah"
+    /                     i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+    /                     a href="/lecturer-video"
+    /                         i.fas.fa-video-slash.fa-fw
+    /             tr onclick="document.location='/lecturer-view';return false;" title="Klik untuk melihat detail"
+    /                 td Tenses
+    /                 td Bahasa Inggris
+    /                 td 2 jam
+    /                 td 16-11-2018
+    /                 td Belum dimulai
+    /                 td
+    /                     a href="/lecturer-view" title="Klik untuk melihat detail"
+    /                         i.fas.fa-eye.fa-fw
+    /                     a href="/lecturer-edit" title="Klik untuk mengubah"
+    /                         i.fas.fa-pencil-alt.fa-fw
+    /                     i.fas.fa-trash-alt.fa-fw title="Klik untuk menghapus"
+    /                     a href="/lecturer-video"
+    /                         i.fas.fa-video-slash.fa-fw

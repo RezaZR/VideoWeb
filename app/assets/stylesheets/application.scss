@@ -104,14 +104,14 @@ footer {
 a {
     background: transparent;
     text-decoration: none;
-    color: #f5f5f5;
+    color: #FAF9FA;
     &:active,
     &:hover,
     &:link,
     &:visited {
         background: transparent;
         text-decoration: none;
-        color: #f5f5f5;
+        color: #FAF9FA;
     }
 }
 
@@ -311,6 +311,9 @@ textarea {
         &--sm {
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
         }
+        &--md {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        }
     }
 }
 
@@ -320,8 +323,7 @@ textarea {
 }
 
 .btn {
-    line-height: 49px;
-    padding: 0 35px;
+    padding: .75em 1em;
     border-radius: 25px;
     background-color: #fff;
     text-align: center;
@@ -330,9 +332,10 @@ textarea {
     cursor: pointer;
     display: inline-block;
     &--sm {
-        border: 1px solid #4d4d4d;
+        border: 1px solid #555;
         border-radius: 5px;
-        padding: 0 1em;
+        padding: .35em 1em;
+        font-size: 15px;
     }
 }
 
@@ -512,11 +515,11 @@ textarea {
             opacity: 1;
             display: block;
             overflow: hidden;
-            height: 90px;
+            height: 81px;
             & li {
                 display: block;
                 &:hover {
-                    background-color: #000;
+                    background-color: #424040;
                 }
                 &:not(:last-child) {
                     border-bottom: .5px solid rgba(245, 245, 245, .5);
@@ -529,7 +532,7 @@ textarea {
         cursor: pointer;
         text-align: left;
         padding: .5em 5em;
-        border-bottom: 2px solid #f5f5f5;
+        border-bottom: 2px solid #FAF9FA;
         transition: 0.15s ease;
     }
     & ul {
@@ -538,9 +541,8 @@ textarea {
         width: 100%;
         overflow: visible;
         opacity: 0;
-        background: #2f2f2f;
+        background: #4e4e4e;
         transition: 0.4s ease;
-        border-bottom: 2px solid #f5f5f5;
     }
     & li {
         display: none;
@@ -549,13 +551,6 @@ textarea {
         padding: .5em;
         text-align: center;
         cursor: pointer;
-        &:first-child {
-            margin-top: .25em;
-        } 
-        &:last-child {
-            margin-bottom: .25em;
-        }
-        
     }
     & svg {
         margin-right: .5em;
@@ -579,7 +574,7 @@ textarea {
         display: inline-block;
         width: 12px;
         height: 3px;
-        background-color: #f5f5f5;
+        background-color: #FAF9FA;
         transition: 0.4s ease;
     } &:after {
         position: absolute;
@@ -643,7 +638,7 @@ textarea {
 .dataTables_wrapper .dataTables_filter input {
     border-radius: 5px;
     border: none;
-    border: 1px solid #4d4d4d;
+    border: 1px solid #555;
     padding: .25em;
     &:hover, &:active, &:focus {
         outline: none;
@@ -651,22 +646,22 @@ textarea {
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-    color: #f5f5f5 !important;
+    color: #FAF9FA !important;
     font-weight: 600;
-    background-color: #4d4d4d;
+    background-color: #555;
     border-radius: 5px;
 }
 
 table.dataTable.no-footer {
-    border: 1px solid #4d4d4d;
+    border: 1px solid #555;
 }
 
 .dataTable {
     & thead {
         background-color: #C62828;
-        color: #f5f5f5;
+        color: #FAF9FA;
         & th:not(:last-child) {
-            border-right: 1px solid #4d4d4d;
+            border-right: 1px solid #555;
         }
     }
     & tbody {
@@ -681,7 +676,7 @@ table.dataTable.no-footer {
                     }
                 }
                 &:not(:last-child) {
-                    border-right: 1px solid #4d4d4d;
+                    border-right: 1px solid #555;
                 }
             }
         }
@@ -689,7 +684,7 @@ table.dataTable.no-footer {
 }
 
 table.dataTable.display tbody tr.odd {
-    background-color: #f5f5f5;
+    background-color: #FAF9FA;
 }
 
 table.dataTable.display tbody tr:hover {
@@ -703,8 +698,8 @@ table.dataTable.display tbody tr:hover {
     width: 100%;
     display: block;
     overflow: visible;
-    background-color: #4d4d4d;
-    color: #f5f5f5;
+    background-color: #555;
+    color: #FAF9FA;
     & img {
         width: 125px;
         height: 75px;
@@ -719,7 +714,7 @@ table.dataTable.display tbody tr:hover {
     display: block;
     overflow: visible;
     background-color: #000;
-    color: #f5f5f5;
+    color: #FAF9FA;
     font-weight: 600;
     font-size: 12px;
 }
@@ -732,7 +727,7 @@ main {
 }
 
 .fullscreen {
-    background-color: #f5f5f5;
+    background-color: #FAF9FA;
     display: block;
     overflow: hidden;
     width: 100%;
@@ -746,15 +741,61 @@ main {
     & .first {
         margin-right: .5em;
     }
-    & h2 {
-        font-size: 24px;
-        border-bottom: 1px solid #4d4d4d;
+    & input {
+        display: none;
+        &:checked + label {
+            color: #555;
+            border: 1px solid #bbb;
+            border-top: 2px solid #C62828;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 2px solid #FAF9FA;
+        }
+    }
+    & label {
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 15px 25px;
+        font-weight: 600;
+        text-align: center;
+        color: #bbb;
+        border: 1px solid transparent;
+        & svg {
+            margin-right: .25em;
+        }
+        &:hover {
+            color: #888;
+            cursor: pointer;
+        }
+    }
+    & #tab1:checked ~ #content1,
+    & #tab2:checked ~ #content2,
+    & #tab3:checked ~ #content3,
+    & #tab4:checked ~ #content4 {
+        display: block;
+    }
+    &__content {
+        display: none;
+        padding: 20px 0 0;
+        border-top: 1px solid #bbb;
+        & h2 {
+            font-size: 24px;
+        }
+        &__video {
+            margin: 2em 0;
+            display: block;
+            overflow: hidden;
+            & iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
     }
 }
 
 .index-form {
     & .col-10, & .col-8 {
-        border-bottom: 1px solid #4d4d4d;
+        border-bottom: 1px solid #555;
         & h2 {
             font-size: 24px;
         }
@@ -770,14 +811,14 @@ main {
         margin: 0 auto;
         & table {
             margin: 3em auto;
-            border: 1px solid #4d4d4d;
+            border: 1px solid #555;
             padding: 1em;
             width: 100%;
             border-collapse: collapse;
             & tbody {
                 & tr {
                     & th {
-                        border-right: 1px solid #4d4d4d;
+                        border-right: 1px solid #555;
                         background-color: #C62828;
                         color: #fff;
                     }
@@ -786,20 +827,20 @@ main {
                         text-align: center;
                     }
                     &:not(:last-child) {
-                        border-bottom: 1px solid #4d4d4d;
+                        border-bottom: 1px solid #555;
                     }
                 }
             }
         }
     }
     &__info {
-        background-color: #2f2f2f;
+        background-color: #4e4e4e;
         height: 100%;
         flex: 0 0 16.66666667%;
         max-width: 16.66666667%;
         position: fixed;
         padding: .75em;
-        color: #f5f5f5;
+        color: #FAF9FA;
         & h4 {
             font-size: 16px;
         }
@@ -882,7 +923,7 @@ main {
         overflow: hidden;
         width: 100%;
         padding: .75em;
-        border-bottom: #4d4d4d;
+        border-bottom: #555;
         & h2, small {
             display: block;
         }
@@ -924,7 +965,7 @@ main {
                     width: 100%;
                     height: 50px;
                     border-radius: 5px;
-                    border: 1px solid #4d4d4d;
+                    border: 1px solid #555;
                 }
             }
         }
@@ -936,3 +977,4 @@ main {
         }
     }
 }
+
