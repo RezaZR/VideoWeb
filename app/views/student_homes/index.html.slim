@@ -1,0 +1,165 @@
+section.home.fullscreen            
+    input#student-tab1 checked="" name="tabs" type="radio" /
+    label.home__label for="student-tab1"
+        i.fas.fa-clipboard-list.fa-fw
+        | Jadwal
+    input#student-tab2 name="tabs" type="radio" /
+    label.home__label for="student-tab2"
+        i.fas.fa-user.fa-fw
+        | Pengajar
+    input#student-tab3 name="tabs" type="radio" /
+    label.home__label for="student-tab3"
+        i.fas.fa-video.fa-fw
+        | Video
+    input#student-tab4 name="tabs" type="radio" /
+    label.home__label for="student-tab4"
+        i.fas.fa-history.fa-fw
+        | Riwayat
+
+    .home__content#student-content1
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Jadwal - Papan Tulis Online
+        .home__content__body
+            table.display#table-1
+                thead
+                    tr
+                        th Topik
+                        th Mata Pelajaran
+                        th Jam Mulai
+                        th Durasi
+                        th Tanggal Mulai
+                        th Status
+                        th Notifikasi
+                tbody
+                    tr
+                        td Percepatan Benda
+                        td Fisika
+                        td 12.00 WIB
+                        td 2 jam
+                        td 14-11-2018
+                        td Belum dimulai
+                        td
+                            a href="/student-home"
+                                i.fas.fa-bell.fa-fw
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Jadwal - Live Streaming
+        .home__content__body
+            table.display#table-2
+                thead
+                    tr
+                        th Topik
+                        th Mata Pelajaran
+                        th Jam Mulai
+                        th Durasi
+                        th Tanggal Mulai
+                        th Status
+                        th Notifikasi
+                tbody
+                    tr
+                        td Trigonometri
+                        td Matematika
+                        td 14.00 WIB
+                        td 2 jam
+                        td 12-11-2018
+                        td Belum dimulai
+                        td
+                            a href="/student-home"
+                                i.fas.fa-bell-slash.fa-fw
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Jadwal - Offline Streaming
+        .home__content__body
+            table.display#table-3
+                thead
+                    tr
+                        th Topik
+                        th Mata Pelajaran
+                        th Jam Mulai
+                        th Durasi
+                        th Tanggal Mulai
+                        th Status
+                        th Notifikasi
+                tbody
+                    tr
+                        td Tenses
+                        td Bahasa Inggris
+                        td 13.00 WIB
+                        td 2 jam
+                        td 16-11-2018
+                        td Belum dimulai
+                        td
+                            a href="/student-home"
+                                i.fas.fa-bell-slash.fa-fw
+    .home__content#student-content2
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 List Pengajar
+        .home__content__body
+            .col-3  
+                a href="/student-video"
+                    .home__content__body__card.shadow__outset--sm
+                        = image_tag("image-user.png")
+                        p 
+                            i.fas.fa-id-card.fa-fw
+                            | Pengajar 1
+                        p 
+                            i.fas.fa-book.fa-fw
+                            | Bahasa Inggris, Fisika, Matematika
+                        p 
+                            i.fas.fa-users.fa-fw
+                            | 1
+    .home__content#student-content3
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Video yang Anda Simpan
+        .home__content__body
+            .col-3
+                #video
+    .home__content#student-content4
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Riwayat Bimbingan
+        .home__content__body
+            table.display#table-4
+                thead
+                    tr
+                        th Topik
+                        th Mata Pelajaran
+                        th Jam Mulai
+                        th Durasi
+                        th Tanggal Mulai
+                        th Mode
+                        th Status
+                tbody
+                    tr
+                        td Gravitasi
+                        td Fisika
+                        td 08.00 WIB
+                        td 2 jam
+                        td 9-9-2018
+                        td Live streaming
+                        td Telah selesai
+                    tr
+                        td Gerund
+                        td Bahasa Inggris
+                        td 17.00 WIB
+                        td 2 jam
+                        td 11-9-2018
+                        td Offline streaming
+                        td Telah selesai
+                    tr
+                        td Integral dan Turunan
+                        td Matematika
+                        td 21.00 WIB
+                        td 2 jam
+                        td 13-11-2018
+                        td Papan tulis online
+                        td Telah selesai

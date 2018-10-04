@@ -48,17 +48,22 @@ html
                       | Admin
                     - if params[:controller] == "lecturer_homes" || params[:controller] == "lecturer_create" || params[:controller] == "lecturer_edit" || params[:controller] == "lecturer_view" || params[:controller] == "lecturer_video"
                       | Pengajar 1
-                    - if params[:controller] == "Student_homes"
-                      | Pelajar 1
+                    - if params[:controller] == "student_homes" || params[:controller] == "student_video"
+                      | Johan Priambudi
                     span.arrow
-                  ul.ul--admin.shadow__outset--md
-                    - if params[:controller] != "admin_homes" || params[:controller] == "admin_create_users"
+                  - if params[:controller] == "admin_homes" || params[:controller] == "admin_create_users"
+                    ul.ul--admin.shadow__outset--md
+                      li
+                        i.fas.fa-arrow-circle-right
+                        | Keluar
+                  - else
+                    ul.shadow__outset--md
                       li
                         i.fas.fa-user
                         | Ubah profil
-                    li
-                      i.fas.fa-arrow-circle-right
-                      | Keluar
+                      li
+                        i.fas.fa-arrow-circle-right
+                        | Keluar
         main
           = yield
         - if params[:controller] == "admin_homes" || params[:controller] == "admin_create_users"

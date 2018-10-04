@@ -1,8 +1,3 @@
-$('#table-1').DataTable();
-$('#table-2').DataTable();
-$('#table-3').DataTable();
-$('#table-4').DataTable();
-
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -13,7 +8,7 @@ var player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video', {
-        videoId: 'NLVE4ZxGDWs',
+        videoId: 'Bq46m1G1HYg',
         events: {
             'onStateChange': onPlayerStateChange
         }

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "lecturer-video" => "lecturer_video#index"
 
   get "student-home" => "student_homes#index"
+  get "student-video" => "student_video#index"
 end
