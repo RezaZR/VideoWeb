@@ -51,11 +51,11 @@ html
                     - if params[:controller] == "Student_homes"
                       | Pelajar 1
                     span.arrow
-                  ul.shadow__outset--md
+                  ul.ul--admin.shadow__outset--md
                     - if params[:controller] != "admin_homes" || params[:controller] == "admin_create_users"
-                    li
-                      i.fas.fa-user
-                      | Ubah profil
+                      li
+                        i.fas.fa-user
+                        | Ubah profil
                     li
                       i.fas.fa-arrow-circle-right
                       | Keluar

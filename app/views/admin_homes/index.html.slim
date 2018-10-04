@@ -1,26 +1,105 @@
-section.home.fullscreen
-    .col-12
-        .d-flex.justify-content-end
-            a.btn.btn--sm.btn.btn-standard href="/admin-create"
-                i.fas.fa-plus-circle.fa-fw
-                | Buat Pengguna Baru
-    .col-12
-        table.display#table
-            thead
-                tr
-                    th NIK/NPM
-                    th Nama
-                    th Level
-            tbody
-                tr title="Klik untuk melihat detail"
-                    td 11028
-                    td Joko Priyatno
-                    td Pengajar
-                tr title="Klik untuk melihat detail"
-                    td 09011
-                    td Andina Cahyadi
-                    td Pengajar
-                tr title="Klik untuk melihat detail"
-                    td 18027
-                    td Johan Priambudi
-                    td Pelajar
+section.home.fullscreen            
+    input#admin-tab1 checked="" name="tabs" type="radio" /
+    label.home__label for="admin-tab1"
+        i.fas.fa-user.fa-fw
+        | Pengguna
+    input#admin-tab2 name="tabs" type="radio" /
+    label.home__label for="admin-tab2"
+        i.fas.fa-video.fa-fw
+        | Video
+    input#admin-tab3 name="tabs" type="radio" /
+    label.home__label for="admin-tab3"
+        i.fas.fa-flag.fa-fw
+        | Laporan
+
+    .home__content#admin-content1
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Pengguna - Pengajar
+            .col-6
+                .d-flex.justify-content-end
+                    a.btn.btn-standard.first href="/admin-create"
+                        i.fas.fa-plus-circle.fa-fw
+                        | Buat Pengajar Baru
+        .home__content__body
+            table.display#table-1
+                thead
+                    tr
+                        th NIK
+                        th Nama
+                        th Spesialisasi
+                        th Pengikut
+                        th Unggahan Video
+                        th Aksi
+                tbody
+                    tr
+                        td 11027
+                        td Pengajar 1
+                        td Bahasa Inggris, Fisika, Matematika
+                        td 1 orang
+                        td 3
+                        td
+                            a href="/admin-home"
+                                i.fas.fa-user-slash.fa-fw
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Pengguna - Pelajar
+        .home__content__body
+            table.display#table-2
+                thead
+                    tr
+                        th NPM
+                        th Nama
+                tbody
+                    tr
+                        td 18027
+                        td Johan Priambudi
+    .home__content#admin-content2
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Video Terunggah
+        .home__content__body
+            table.display#table-3
+                thead
+                    tr
+                        th Nama Pengunggah
+                        th Judul
+                        th Mata Pelajaran
+                        th Deskripsi
+                        th Aksi
+                tbody
+                    tr
+                        td Pengajar 1
+                        td Momen Gaya/Torsi
+                        td Fisika
+                        td Momen gaya/torsi adalah gaya yang diberikan kepada suatu benda sehingga membuat benda itu berputar.
+                        td 
+                            a href="/lecturer-home"
+                                i.fas.fa-trash-alt.fa-fw
+                    tr
+                        td Pengajar 1
+                        td Momen Gaya/Torsi
+                        td Fisika
+                        td Momen gaya/torsi adalah gaya yang diberikan kepada suatu benda sehingga membuat benda itu berputar.
+                        td 
+                            a href="/lecturer-home"
+                                i.fas.fa-trash-alt.fa-fw
+                    tr
+                        td Pengajar 1
+                        td Momen Gaya/Torsi
+                        td Fisika
+                        td Momen gaya/torsi adalah gaya yang diberikan kepada suatu benda sehingga membuat benda itu berputar.
+                        td 
+                            a href="/lecturer-home"
+                                i.fas.fa-trash-alt.fa-fw
+    .home__content#admin-content3
+        .d-flex.centered-items
+            .col-6
+                .d-flex.justify-content-start
+                    h2 Laporan
+        .home__content__body
+            p Halaman ini kosong dikarenakan tidak ada pengguna yang dilaporkan.
+            

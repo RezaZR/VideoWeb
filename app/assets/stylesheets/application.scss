@@ -526,6 +526,21 @@ textarea {
                 }
             }
         }     
+        & .ul--admin {
+            opacity: 1;
+            display: block;
+            overflow: hidden;
+            height: 40.5px;
+            & li {
+                display: block;
+                &:hover {
+                    background-color: #424040;
+                }
+                &:not(:last-child) {
+                    border-bottom: .5px solid rgba(245, 245, 245, .5);
+                }
+            }
+        }
     }
     & .dropdown__title {
         display: block;
@@ -543,6 +558,9 @@ textarea {
         opacity: 0;
         background: #4e4e4e;
         transition: 0.4s ease;
+    }
+    & .ul--admin {
+        
     }
     & li {
         display: none;
@@ -763,10 +781,13 @@ main {
             cursor: pointer;
         }
     }
-    & #tab1:checked ~ #content1,
-    & #tab2:checked ~ #content2,
-    & #tab3:checked ~ #content3,
-    & #tab4:checked ~ #content4 {
+    & #admin-tab1:checked ~ #admin-content1,
+    & #admin-tab2:checked ~ #admin-content2,
+    & #admin-tab3:checked ~ #admin-content3,
+    & #lecturer-tab1:checked ~ #lecturer-content1,
+    & #lecturer-tab2:checked ~ #lecturer-content2,
+    & #lecturer-tab3:checked ~ #lecturer-content3,
+    & #lecturer-tab4:checked ~ #lecturer-content4 {
         display: block;
     }
     &__content {
